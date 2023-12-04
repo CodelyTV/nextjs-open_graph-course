@@ -1,0 +1,32 @@
+[
+	{
+		"title": "Problemas con DDD: Gestión de errores en Eventos de Domino",
+		"emoji": "🌩️",
+		"summary": "Profundiza en los principales problemas al publicar y consumir eventos de dominio.",
+		"authors": ["javier-ferrer", "rafa-gomez"],
+		"categories": ["arquitectura-software"],
+		"sticker": "/img/cursos/problemas-ddd-eventos.png",
+		"slug": "problemas-ddd-eventos",
+		"color": "pink"
+	},
+	{
+		"title": "Linting en PHP",
+		"emoji": "🏮",
+		"summary": "Añade un estándar de código en tu proyecto PHP o crea uno nuevo extendiendo estándares PSR y PER.",
+		"authors": ["javier-ferrer", "rafa-gomez"],
+		"categories": ["backend"],
+		"sticker": "/img/cursos/php-linter.png",
+		"slug": "php-linter",
+		"color": "green"
+	},
+	{
+		"title": "Modelado del Dominio: Eventos de Dominio",
+		"emoji": "🐉",
+		"summary": "Domina los Eventos de Dominio en el diseño de software y haz tus aplicaciones más mantenibles, escalables y testables.",
+		"authors": ["javier-ferrer", "rafa-gomez"],
+		"categories": ["arquitectura-software"],
+		"sticker": "/img/cursos/eventos-dominio.png",
+		"slug": "eventos-dominio",
+		"color": "yellow"
+	}
+]

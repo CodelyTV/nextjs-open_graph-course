@@ -11,6 +11,38 @@ export const size = {
 
 export const contentType = "image/png";
 
-export default function Image() {
-	return new ImageResponse(<div>Codely</div>);
+export default async function Image() {
+	const comicMono = fetch(new URL("./../../public/ComicMono.ttf", import.meta.url)).then((res) =>
+		res.arrayBuffer(),
+	);
+
+	return new ImageResponse(
+		(
+			<div
+				style={{
+					display: "flex",
+					alignItems: "center",
+					justifyContent: "center",
+					width: "100%",
+					height: "100%",
+					fontSize: "5rem",
+					backgroundColor: "tomato",
+					color: "white",
+				}}
+			>
+				Codely
+			</div>
+		),
+		{
+			...size,
+			fonts: [
+				{
+					name: "Comic Mono",
+					data: await comicMono,
+					style: "normal",
+					weight: 400,
+				},
+			],
+		},
+	);
 }

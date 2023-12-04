@@ -56,12 +56,27 @@ export default async function Image({ params }: { params: { slug: string } }) {
 						}}
 					/>
 				</div>
-				<div style={{ display: "flex", width: "70%", padding: "4rem" }}>
+				<div style={{ display: "flex", width: "70%", padding: "4rem", position: "relative" }}>
 					<h1 style={{ fontSize: "4rem", margin: "0" }}>
 						{course.emoji} {course.title}
 					</h1>
 
-					<div>Imágenes</div>
+					<div style={{ display: "flex", position: "absolute", bottom: "20px", left: "4rem" }}>
+						{course.authors.reverse().map((author, index) => (
+							<div key={author} style={{ display: "flex" }}>
+								<img
+									src={`https://codely.com/img/profesores/${author}.jpg`}
+									alt={author}
+									width="50"
+									height="50"
+									style={{
+										borderRadius: "50%",
+										marginLeft: index !== 0 ? "-5rem" : "1rem",
+									}}
+								/>
+							</div>
+						))}
+					</div>
 				</div>
 			</div>
 		),

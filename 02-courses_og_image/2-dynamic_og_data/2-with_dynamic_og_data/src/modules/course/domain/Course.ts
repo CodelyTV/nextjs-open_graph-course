@@ -20,4 +20,11 @@ export class Course {
 
 		return colors[this.color] || "#3cff64";
 	}
+
+	authorsName(): string {
+		return this.authors
+			.join(", ")
+			.replaceAll("-", " ")
+			.replace(/\b\w/g, (word) => word.toUpperCase());
+	}
 }

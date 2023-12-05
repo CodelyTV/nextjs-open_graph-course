@@ -10,7 +10,7 @@ export class JsonCourseRepository implements CourseRepository {
 				course.title,
 				course.emoji,
 				course.summary,
-				course.authors,
+				course.authors.sort(),
 				course.categories,
 				course.sticker,
 				course.slug,

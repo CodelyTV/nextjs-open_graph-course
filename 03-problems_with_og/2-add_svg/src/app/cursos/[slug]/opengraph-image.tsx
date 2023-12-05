@@ -24,7 +24,7 @@ const isotype = (
 		style={{
 			position: "absolute",
 			bottom: "5px",
-			left: "145px",
+			left: "360px",
 		}}
 	>
 		<g transform="scale(1.3)">
@@ -56,7 +56,7 @@ const logo = (
 		style={{
 			position: "absolute",
 			bottom: "5px",
-			left: "340px",
+			left: "70px",
 			color: "#ffffff",
 		}}
 	>
@@ -116,7 +116,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
 						}}
 					/>
 
-					{isotype}
+					{logo}
 				</div>
 				<div style={{ display: "flex", width: "70%", padding: "4rem", position: "relative" }}>
 					<h1 style={{ fontSize: "4rem", margin: "0" }}>
@@ -140,7 +140,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
 						))}
 					</div>
 
-					{logo}
+					{isotype}
 				</div>
 			</div>
 		),

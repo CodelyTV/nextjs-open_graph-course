@@ -12,6 +12,11 @@ export const metadata: Metadata = {
 	openGraph: {
 		title: "Codely Lego",
 		description: "El mejor de la historia",
+		images: [
+			{
+				url: "https://api.microlink.io?url=https://codely.com&screenshot=true&meta=false&embed=screenshot.url",
+			},
+		],
 	},
 };
 

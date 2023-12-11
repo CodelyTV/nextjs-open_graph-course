@@ -33,4 +33,20 @@ export class Course {
 			this.title
 		}&authors=${this.authors.join(",")}&color=${this.color}&sticker=${this.sticker}`;
 	}
+
+	courseUrl(): string {
+		return `https://codely.com/cursos/${this.slug}`;
+	}
+
+	shareInTweetUrl(): string {
+		const text = `${this.emoji} Curso TOP el de ${
+			this.title
+		} por ${this.authorsName()}! ${this.courseUrl()}`;
+
+		return `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
+	}
+
+	shareInLinkedInUrl(): string {
+		return `https://www.linkedin.com/sharing/share-offsite/?url=${this.courseUrl()}`;
+	}
 }

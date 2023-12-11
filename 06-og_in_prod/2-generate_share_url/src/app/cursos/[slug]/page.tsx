@@ -1,5 +1,6 @@
 import { Metadata, ResolvingMetadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { JsonCourseRepository } from "@/modules/course/infrastructure/JsonCourseRepository";
@@ -54,7 +55,11 @@ export default function CourseDetails({ params }: Props) {
 		<div>
 			<h1>{course.title}</h1>
 			<p>{course.summary}</p>
-			<Image src={course.ogImageUrl()} alt="Course thumbnail" width="640" height="315" />
+			<div>
+				<Image src={course.ogImageUrl()} alt="Course thumbnail" width="640" height="315" />
+			</div>
+			<Link href={course.shareInTweetUrl()}>🐦 Compartir en Twitter</Link> |{" "}
+			<Link href={course.shareInLinkedInUrl()}>💼 Compartir en LinkedIn</Link>
 		</div>
 	);
 }

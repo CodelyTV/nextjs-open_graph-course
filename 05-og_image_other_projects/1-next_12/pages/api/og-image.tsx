@@ -1,10 +1,13 @@
 import { ImageResponse } from '@vercel/og';
+import type { NextRequest } from 'next/server';
 
 export const config = {
 	runtime: 'edge',
 };
 
-export default async function handler() {
+export default async function handler(req: NextRequest) {
+	const text = req.nextUrl.searchParams.get('text') || 'Codely';
+
 	return new ImageResponse(
 		(
 			<div
@@ -18,7 +21,7 @@ export default async function handler() {
 					alignItems: 'center',
 				}}
 			>
-				 Codely
+				{text}
 			</div>
 		),
 		{
